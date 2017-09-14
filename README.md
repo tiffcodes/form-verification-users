@@ -1,11 +1,12 @@
 # Address Book API
 A simple address book API.
+
 `https://form-verification-users-api.herokuapp.com`
 
 ## Endpoints
 
-### Users
-#### `/users`
+## Users
+### `/users`
 **POST** _posts a user_
 
 Params | Value | Description | Valid format example
@@ -18,7 +19,7 @@ Params | Value | Description | Valid format example
 
 #### Sample Response 
 
-##### *Success*
+#### Success
 
 	{
 		status: 200,
@@ -27,12 +28,11 @@ Params | Value | Description | Valid format example
 			email: "hello@hello.ca", 
 			address: "Toronto, On", 
 			phone: "555-555-5555",
-			_id: "59ba99f2345dd3379e3445da",
-			__v: 0
+			_id: "59ba99f2345dd3379e3445da"
 		}
 	}
 
-##### *Fail*
+#### Fail
 
 	{
 		error: 'Error message',
@@ -40,8 +40,8 @@ Params | Value | Description | Valid format example
 	}
 
 
-### Users:id
-#### `/users:id`
+
+### `/users:id`
 **DELETE** _deletes a user_
 
 Params | Value | Description | Valid format example
@@ -50,14 +50,14 @@ Params | Value | Description | Valid format example
 
 **Example:** `https://form-verification-users-api.herokuapp.com/users/59ba99f2345dd3379e3445da`
 
-##### *Success*
+#### Success
 
 	{
 		success: true,
 		status: 200
 	}
 
-##### *Fail* 
+#### Fail
 
 	{
 		error: 'Error message',
@@ -65,3 +65,13 @@ Params | Value | Description | Valid format example
 	}
 
 
+### To do:
+Please create an app using the `index.html` included here. Your app should be able to add a user to the address book. Please validate all inputs before adding a user to the database. 
+
+Do not use jQuery for this project. Alternatives such as fetch will work. 
+
+Please send a link to your git repo once you're finished.
+
+BONUS: the API allows for users to be deleted. If you want a challenge, add the ability to delete a contact.
+
+Best of luck!
