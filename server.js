@@ -24,10 +24,7 @@ app.use(function(req, res, next) {
     next();
 }); 
 
-app.use(express.static('.'));
-
 app.use(bodyParser.json());
-
 
 app.get('/users', (req, res) => {
 	users.find({},(err, users) => {
