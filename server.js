@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 
-mongoose.connect('mongodb://localhost/users');
+mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/users');
 
 const Schema = mongoose.Schema;
 
@@ -136,5 +136,5 @@ app.delete('/users/:id', (req,res) => {
 	});
 });
 
-app.listen('3500');
+app.listen(process.env.PORT||3500);
 console.log('App is listening on port 3500');
